@@ -1,0 +1,91 @@
+{
+  "resourceType" : "Consent",
+  "id" : "ConsentExample",
+  "meta" : {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ],
+    "profile" : ["http://hl7.org/fhir/us/consent-management/StructureDefinition/FASTConsent"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Consent ConsentExample</p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Consent.manager",
+    "valueReference" : {
+      "reference" : "Organization/organization-fast-consent-ri",
+      "identifier" : {
+        "system" : "http://example.org/identifiers",
+        "value" : "organization-fast-consent-ri"
+      }
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://example.org/identifiers",
+    "value" : "ec63290f-1f93-4ed3-b531-0d86e2791165"
+  }],
+  "status" : "active",
+  "scope" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
+      "code" : "patient-privacy"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "INFA"
+    }]
+  }],
+  "patient" : {
+    "reference" : "Patient/patient-lara-miren",
+    "identifier" : {
+      "system" : "http://example.org/identifiers",
+      "value" : "patient-lara-miren"
+    }
+  },
+  "dateTime" : "2025-08-08T16:47:10-04:00",
+  "performer" : [{
+    "reference" : "Patient/patient-lara-miren",
+    "identifier" : {
+      "system" : "http://example.org/identifiers",
+      "value" : "patient-lara-miren"
+    }
+  }],
+  "sourceReference" : {
+    "reference" : "DocumentReference/docref-fileconsent",
+    "identifier" : {
+      "system" : "http://example.org/identifiers",
+      "value" : "docref-fileconsent"
+    }
+  },
+  "policy" : [{
+    "uri" : "https://example.org/hipaa-auth"
+  }],
+  "provision" : {
+    "type" : "permit",
+    "period" : {
+      "start" : "2025-08-01T00:00:00-04:00"
+    },
+    "actor" : [{
+      "role" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+          "code" : "IRCP"
+        }]
+      },
+      "reference" : {
+        "reference" : "RelatedPerson/relatedperson-robert-miren",
+        "identifier" : {
+          "system" : "http://example.org/identifiers",
+          "value" : "relatedperson-robert-miren"
+        }
+      }
+    }]
+  }
+}

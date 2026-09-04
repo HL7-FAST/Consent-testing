@@ -1,0 +1,2463 @@
+{
+  "resourceType" : "TestPlan",
+  "id" : "fhir-consent-management-1.0.0-preview-test-plan",
+  "url" : "http://hl7.org/fhir/us/consent-management-tg/TestPlan/fhir-consent-management-1.0.0-preview-test-plan",
+  "name" : "FHIRCONSENTMANAGEMENT100PREVIEWTESTPLAN",
+  "title" : "Scalable Consent Management 1.0.0-preview Test Plan",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-04T11:50:23-04:00",
+  "publisher" : "HL7 International / Community Based Collaborative Care",
+  "contact" : [{
+    "name" : "HL7 International / Community Based Collaborative Care",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/cbcc"
+    }]
+  }],
+  "description" : "The Scalable Consent Management Testing Guide defines the testing artifacts used to verify and validate implementations declaring conformance to and against the Scalable Consent Management Implementation Guide.",
+  "testCase" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-43"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-35"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-36"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-333"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-52"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-56"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-331"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1030"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1031"
+    }],
+    "sequence" : 1,
+    "dependency" : [{
+      "description" : "**Read a Consent**\n\nTest a client and server to verify support for the Consent read interaction and the return of a valid Consent resource conforming to the FASTConsent profile. This scenario is generic and can be used with any FHIR format and query parameters.\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** A Consent conforming to the FASTConsent profile exists at the CAS, and its ID is known.\n\n**Narrative:**\n\n1. Client sends a conformant [read](https://hl7.org/fhir/R4/http.html#read) to CAS using the known ID. This is unconstrained, e.g. the \"\\_format\" parameter may be present.\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the resource.\n5. Verify the response is valid according to the linked requirements, including that the Consent declares and conforms to the FASTConsent profile.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-63"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-43"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-35"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-37"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-333"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-52"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-57"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-331"
+    }],
+    "sequence" : 2,
+    "dependency" : [{
+      "description" : "**Search for a Consent**\n\nTest a client and server to verify support for the Consent search interaction and the return of at least one valid Consent resource conforming to the FASTConsent profile. This scenario is generic and can be used with any FHIR format and query parameters.\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** At least one Consent conforming to the FASTConsent profile exists at the CAS, and details about it sufficient to search are known.\n\n**Narrative:**\n\n1. Client sends a conformant [search](https://hl7.org/fhir/R4/http.html#search) request to CAS using some combination of the search criteria required to be supported.\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the matching resource(s).\n5. Verify the response is valid according to the linked requirements.\n6. Verify that at least one Consent resource is returned, and that each returned Consent declares and conforms to the FASTConsent profile.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-364"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-199"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-58"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-search-parameters-client-consent-server.html#requirement-472"
+    }],
+    "sequence" : 3,
+    "dependency" : [{
+      "description" : "**Search for Consent by FASTConsentController - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** FASTConsentController details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the FASTConsentController criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-364"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-199"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-58"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-search-parameters-client-consent-server.html#requirement-472"
+    }],
+    "sequence" : 4,
+    "dependency" : [{
+      "description" : "**Search for Consent by FASTConsentController - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** FASTConsentController details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the FASTConsentController criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-365"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-72"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-369"
+    }],
+    "sequence" : 5,
+    "dependency" : [{
+      "description" : "**Search for Consent by date - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** date details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the date criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-365"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-72"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-369"
+    }],
+    "sequence" : 6,
+    "dependency" : [{
+      "description" : "**Search for Consent by date - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** date details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the date criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-367"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-200"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-371"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-search-parameters-client-consent-server.html#requirement-474"
+    }],
+    "sequence" : 7,
+    "dependency" : [{
+      "description" : "**Search for Consent by FASTConsentManager - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** FASTConsentManager details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the FASTConsentManager criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-367"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-200"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-371"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-search-parameters-client-consent-server.html#requirement-474"
+    }],
+    "sequence" : 8,
+    "dependency" : [{
+      "description" : "**Search for Consent by FASTConsentManager - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** FASTConsentManager details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the FASTConsentManager criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-71"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-40"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-60"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1028"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1029"
+    }],
+    "sequence" : 9,
+    "dependency" : [{
+      "description" : "**Search for Consent by patient - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** patient details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the patient criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-71"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-40"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-60"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1028"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1029"
+    }],
+    "sequence" : 10,
+    "dependency" : [{
+      "description" : "**Search for Consent by patient - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** patient details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the patient criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-201"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-42"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-47"
+    }],
+    "sequence" : 11,
+    "dependency" : [{
+      "description" : "**Search for Consent by scope - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** scope details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the scope criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-201"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-42"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-47"
+    }],
+    "sequence" : 12,
+    "dependency" : [{
+      "description" : "**Search for Consent by scope - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** scope details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the scope criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-73"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-41"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-61"
+    }],
+    "sequence" : 13,
+    "dependency" : [{
+      "description" : "**Search for Consent by status - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** status details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the status criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-73"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-41"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-61"
+    }],
+    "sequence" : 14,
+    "dependency" : [{
+      "description" : "**Search for Consent by status - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** status details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the status criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-331"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-332"
+    }],
+    "sequence" : 15,
+    "dependency" : [{
+      "description" : "**Search for Consent by FASTConsent profile - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** At least one Consent declaring the FASTConsent profile and at least one Consent not declaring it exist at the CAS.\n\n- In step 1, the client includes the FASTConsent profile criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-331"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-332"
+    }],
+    "sequence" : 16,
+    "dependency" : [{
+      "description" : "**Search for Consent by FASTConsent profile - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** At least one Consent declaring the FASTConsent profile and at least one Consent not declaring it exist at the CAS.\n\n- In step 1, the client includes the FASTConsent profile criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1024"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1025"
+    }],
+    "sequence" : 17,
+    "dependency" : [{
+      "description" : "**Search for Consent by \\_id - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** id of a Consent is known.\n\n- In step 1, the client includes the id and requests JSON.\n- In step 6, verify that only the matching Consent resource is returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1024"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1025"
+    }],
+    "sequence" : 18,
+    "dependency" : [{
+      "description" : "**Search for Consent by \\_id - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** id of a Consent is known.\n\n- In step 1, the client includes the id and requests XML.\n- In step 6, verify that only the matching Consent resource is returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1026"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1027"
+    }],
+    "sequence" : 19,
+    "dependency" : [{
+      "description" : "**Search for Consent by identifier - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** identifier of a Consent is known.\n\n- In step 1, the client includes the identifier and requests JSON.\n- In step 6, verify that only the matching Consent resource is returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1026"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1027"
+    }],
+    "sequence" : 20,
+    "dependency" : [{
+      "description" : "**Search for Consent by identifier - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** identifier of a Consent is known.\n\n- In step 1, the client includes the identifier and requests XML.\n- In step 6, verify that only the matching Consent resource is returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1032"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1033"
+    }],
+    "sequence" : 21,
+    "dependency" : [{
+      "description" : "**Search for Consent by patient and status - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** patient and status details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the patient and status criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1032"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1033"
+    }],
+    "sequence" : 22,
+    "dependency" : [{
+      "description" : "**Search for Consent by patient and status - XML**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** patient and status details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the patient and status criteria and requests XML.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1034"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1035"
+    }],
+    "sequence" : 23,
+    "dependency" : [{
+      "description" : "**Search for Consent by patient and date - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** patient and date details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the patient and date criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-consent-server.html#requirement-1034"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-1035"
+    }],
+    "sequence" : 24,
+    "dependency" : [{
+      "description" : "**Search for Consent by patient and date - JSON**\n\nThis test case extends test case \"Search for a Consent\".\n\n**Pre-condition:** patient and date details are known by which at least one Consent would match and at least one Consent would not match at the CAS.\n\n- In step 1, the client includes the patient and date criteria and requests JSON.\n- In step 6, verify that only matching Consent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-397"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-398"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-404"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-401"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-402"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-405"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-399"
+    }],
+    "sequence" : 25,
+    "dependency" : [{
+      "description" : "**Read an AuditEvent**\n\nTest a client and server to verify support for the AuditEvent read interaction and the return of a valid AuditEvent resource conforming to the FASTConsentAuditEvent profile. This scenario is generic and can be used with any FHIR format and query parameters.\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** An AuditEvent conforming to the FASTConsentAuditEvent profile exists at the CAS, and its ID is known.\n\n**Narrative:**\n\n1. Client sends a conformant [read](https://hl7.org/fhir/R4/http.html#read) to CAS using the known ID. This is unconstrained, e.g. the \"\\_format\" parameter may be present.\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the resource.\n5. Verify the response is valid according to the linked requirements, including that the AuditEvent declares and conforms to the FASTConsentAuditEvent profile.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-397"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-398"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-406"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-401"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-402"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-408"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-399"
+    }],
+    "sequence" : 26,
+    "dependency" : [{
+      "description" : "**Search for** **an AuditEvent**\n\nTest a client and server to verify support for the AuditEvent search interaction and the return of at least one valid AuditEvent resource conforming to the FASTConsentAuditEvent profile. This scenario is generic and can be used with any FHIR format and query parameters.\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** At least one AuditEvent conforming to the FASTConsentAuditEvent profile exists at the CAS, and details about it sufficient to search are known.\n\n**Narrative:**\n\n1. Client sends a conformant [search](https://hl7.org/fhir/R4/http.html#search) request to CAS using some combination of the search criteria required to be supported.\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the matching resource(s).\n5. Verify the response is valid according to the linked requirements.\n6. Verify that at least one AuditEvent resource is returned, and that each returned AuditEvent declares and conforms to the FASTConsentAuditEvent profile.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-298"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-299"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-412"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-414"
+    }],
+    "sequence" : 27,
+    "dependency" : [{
+      "description" : "**Search for AuditEvent by patient - JSON**\n\nThis test case extends test case \"Search for an AuditEvent\".\n\n**Pre-condition:** patient details are known by which at least one AuditEvent would match and at least one AuditEvent would not match at the CAS.\n\n- In step 1, the client includes the patient criteria and requests JSON.\n- In step 6, verify that only matching AuditEvent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-298"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-299"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-412"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-414"
+    }],
+    "sequence" : 28,
+    "dependency" : [{
+      "description" : "**Search for** **AuditEvent by patient - XML**\n\nThis test case extends test case \"Search for an AuditEvent\".\n\n**Pre-condition:** patient details are known by which at least one AuditEvent would match and at least one AuditEvent would not match at the CAS.\n\n- In step 1, the client includes the patient criteria and requests XML.\n- In step 6, verify that only matching AuditEvent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-400"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-399"
+    }],
+    "sequence" : 29,
+    "dependency" : [{
+      "description" : "**Search for AuditEvent by FASTConsentAuditEvent profile - JSON**\n\nThis test case extends test case \"Search for an AuditEvent\".\n\n**Pre-condition:** At least one AuditEvent declaring the FASTConsentAuditEvent profile and at least one AuditEvent not declaring it exist at the CAS.\n\n- In step 1, the client includes the FASTConsentAuditEvent profile criteria and requests JSON.\n- In step 6, verify that only matching AuditEvent resources are returned.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-400"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-399"
+    }],
+    "sequence" : 30,
+    "dependency" : [{
+      "description" : "**Search for AuditEvent by FASTConsentAuditEvent profile - XML**\n\nThis test case extends test case \"Search for an AuditEvent\".\n\n**Pre-condition:** At least one AuditEvent declaring the FASTConsentAuditEvent profile and at least one AuditEvent not declaring it exist at the CAS.\n\n- In step 1, the client includes the FASTConsentAuditEvent profile criteria and requests XML.\n- In step 6, verify that only matching AuditEvent resources are returned.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-64"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-377"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-661"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-959"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-381"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-991"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-962"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-960"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-514"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-components-consent-server.html#requirement-565"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-496"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-567"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-513"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client-consent-server.html#requirement-537"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-505"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-517"
+    }],
+    "sequence" : 31,
+    "dependency" : [{
+      "description" : "**Read a Subscription**\n\nTest a client and server to verify support for the Subscription read interaction and the return of a valid Subscription resource conforming to the FASTSubscription profile. This scenario is generic and can be used with any FHIR format and query parameters.\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** A Subscription conforming to the FASTSubscription profile exists at the CAS, and its ID is known.\n\n**Narrative:**\n\n1. Client sends a conformant [read](https://hl7.org/fhir/R4/http.html#read) to CAS using the known ID. This is unconstrained, e.g. the \"\\_format\" parameter may be present.\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the resource.\n5. Verify the response is valid according to the linked requirements, including that the Consent declares and conforms to the FASTSubscription profile.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-69"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-62"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-727"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-35"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-46"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-52"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-53"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-334"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-463"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-133"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-134"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-135"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-166"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-168"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-464"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-70"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-430"
+    }],
+    "sequence" : 32,
+    "dependency" : [{
+      "description" : "**Operation: File a Consent**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Client POSTs to CAS: \\[base\\]/Consent/$fileConsent \\[unconstrained, e.g. the \"document\" parameter may be either flavor\\].\n2. Verify input parameters are valid according to linked requirements.\n3. Tester: Since the $fileConsent response does not identify the new Consent, retain the identifier from the $fileConsent request.\n4. \\[No requirements yet, but something like this: CAS verifies inputs, generates and persists the Consent and related resources. CAS may retain external references (e.g. to Patient), or replace with references to new or matched existing resources.\\]\n5. CAS returns a response.\n6. Verify response is valid according to linked requirements.\n7. Search for the Consent by the identifier saved from the $fileConsent request.\n8. Verify the Consent is found and has status \"active\".\n\n**Post-condition:**\n\n- \\[No requirements yet, but something like this: The Consent and related resources are persisted and available at the CAS.\\]"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-69"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-101"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-634"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-760"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-35"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-374"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-52"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-376"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-334"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-466"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-438"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-439"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-extended-operations-client-consent-server.html#requirement-444"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-469"
+    }],
+    "sequence" : 33,
+    "dependency" : [{
+      "description" : "**Operation: Revoke a Consent**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Client POSTs to CAS: \\[base\\]/Consent/$revokeConsent \\[unconstrained, e.g. the \"document\" parameter may be either flavor\\].\n2. Verify input parameters are valid according to linked requirements.\n3. Tester: Since the $revokeConsent response does not identify the revoked Consent, retain the identifier from the $revokeConsent request.\n4. \\[No requirements yet, but something like this: CAS verifies inputs, persists the revoked Consent and related resources. CAS may retain external references (e.g. to Patient), or replace with references to new or matched existing resources.\\]\n5. CAS returns a response.\n6. Verify response is valid according to linked requirements.\n7. Search for the Consent by the identifier saved from the $revokeConsent request.\n8. Verify the Consent is found and has status \"inactive\".\n\n**Post-condition:**\n\n- \\[No requirements yet, but something like this: The revoked Consent and related resources are persisted and available at the CAS.\\]"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-498"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-564"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-508"
+    }],
+    "sequence" : 34,
+    "dependency" : [{
+      "description" : "**Operation: Get Subscription Status**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** A Subscription exists on the CAS.\n\n**Narrative:**\n\n1. Client POSTs to CAS: \\[base\\]/Subscription/\\[id\\]/$status.\n2. Verify input parameters are valid according to linked requirements.\n3. CAS returns a response.\n4. Verify response is valid according to linked requirements.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    },
+    {
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-artifacts-summary-consent-server.html#requirement-1"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-397"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-398"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-406"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-404"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-412"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-43"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-35"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-37"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-36"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-199"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-72"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-200"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-40"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-42"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-41"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-46"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-374"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-377"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-661"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-959"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-378"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-379"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-380"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-499"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-502"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-504"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-509"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-511"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-602"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-604"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-694"
+    }],
+    "sequence" : 35,
+    "dependency" : [{
+      "description" : "**Obtain server CapabilityStatement**\n\n**Actors:** Consent client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Client sends a metadata request to the CAS, requesting the FHIR 4.0 CS by using the fhirVersion Accept header.\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the system CapabilityStatement.\n5. Verify the response is valid according to the linked requirements.\n6. Verify the CapabilityStatement includes the normative aspects defined in the ConsentAdministrativeServer CapabilityStatement. Additional aspects are permitted but will not be evaluated.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-2"
+    }],
+    "sequence" : 36,
+    "dependency" : [{
+      "description" : "**Obtain server CapabilityStatement - JSON**\n\nThis test case extends test case \"Obtain server CapabilityStatement\".\n\n- In step 1, the client requests JSON.\n- In step 5, verify the CapabilityStatement is JSON.\n- In all steps, evaluate FHIR content as JSON."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-34"
+    }],
+    "sequence" : 37,
+    "dependency" : [{
+      "description" : "**Obtain server CapabilityStatement - XML**\n\nThis test case extends test case \"Obtain server CapabilityStatement\".\n\n- In step 1, the client requests XML.\n- In step 5, verify the CapabilityStatement is XML.\n- In all steps, evaluate FHIR content as XML."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "sequence" : 38,
+    "dependency" : [{
+      "description" : "**Obtain and handle conformant variations of server CapabilityStatement**\n\nThis tests the ability of a client to handle legal variants of CSs.\n\n**Actors:** Consent Client, Simulated CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Client sends a metadata request to the CAS. \\[unconstrained; may or may not use the fhirVersion Accept header\\]\n2. Verify the request is valid according to the linked requirements.\n3. \\[No requirements yet, but something like this: CAS verifies the request is valid.\\]\n4. CAS returns a conformant response containing the system CapabilityStatement.\n5. Verify the response is valid according to the linked requirements.\n6. Verify the CapabilityStatement includes the normative aspects defined in the ConsentAdministrativeServer CapabilityStatement. Additional aspects are permitted but will not be evaluated.\n\n**Post-condition:**\n\n- The client should be able to communicate with this server per the workflows in this IG."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Provisional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "sequence" : 39,
+    "dependency" : [{
+      "description" : "**Obtain and handle STU3 version server CapabilityStatement**\n\nThis tests the ability of a client to handle an STU3 CS.\n\n**Actors:** Consent Client, Simulated CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Client sends a metadata request to the CAS without the fhirVersion Accept header.\n2. Verify the request is valid according to the linked requirements.\n3. CAS returns a conformant response containing an STU3 system CapabilityStatement.\n4. Verify the client detects the version mismatch and resolves somehow, e.g. notifies the user, retries the request including the fhirVersion Accept header, etc.\n\n**Post-condition:**\n\n- None (yet)"
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-artifacts-summary-client.html#requirement-48"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-401"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-402"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-382"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-408"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-405"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-414"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-333"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-52"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-57"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-56"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-58"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-369"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-371"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-60"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-47"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-61"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-53"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-376"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-381"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-991"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-962"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-383"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-384"
+    }],
+    "sequence" : 40,
+    "dependency" : [{
+      "description" : "**Test client CapabilityStatement**\n\n**Actors:** Consent client\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Obtain the client CapabilityStatement.\n2. Verify the CapabilityStatement includes the normative aspects defined in the ConsentClient CapabilityStatement. Additional aspects are permitted but will not be evaluated.\n\n**Post-condition:**\n\n- None"
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-49"
+    }],
+    "sequence" : 41,
+    "dependency" : [{
+      "description" : "**Test client CapabilityStatement - JSON**\n\nThis test case extends test case \"Test client CapabilityStatement\".\n\n- In step 1, obtain the JSON CapabilityStatement.\n- In step 2, evaluate FHIR content as JSON."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-50"
+    }],
+    "sequence" : 42,
+    "dependency" : [{
+      "description" : "**Test client CapabilityStatement - XML**\n\nThis test case extends test case \"Test client CapabilityStatement\".\n\n- In step 1, obtain the XML CapabilityStatement.\n- In step 2, evaluate FHIR content as XML."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-331"
+    }],
+    "sequence" : 43,
+    "dependency" : [{
+      "description" : "**Workflow: Utilize Consent For Disclosure**\n\nThis is a wide-open workflow that can be used as the base for many variations.\n\n**Actors:** Data Consumer, Data Holder with Consent Client, CAS\n\n**Pre-condition:** Data holder has PHI for a patient. CAS has a valid, active Consent associated with that patient. \\[The rest is undefined: Data Holder may already have the Consent and know it is managed at this particular CAS, Data Holder may not know about the Consent or the CAS and discover it at the time the disclosure is requested.\\]\n\n**Narrative:**\n\n1. Data Holder is triggered to disclose PHI for the patient to the Data Consumer. This is unconstrained; it could be a request from the Consumer to the Holder, a push, etc.\n2. Data Holder determines a Consent managed at the CAS affects this disclosure decision.\n3. Optional: If needed, the Data Holder's Consent Client obtains the Consent from the CAS. This is unconstrained; it could be a read, search, etc. Execute the appropriate test cases.\n4. Data Holder uses the Consent to make a determination to disclose. This is unconstrained; the determination could be based on multiple factors of which the Consent is only one part.\n5. Data Holder discloses the PHI. This is the completion of whatever was started in step 1, e.g. a GET response.\n6. Verify information was disclosed.\n7. Data Holder's Consent Client records a disclosure at the CAS. Execute test case \"Operation: Record a Disclosure\".\n\n**Post-condition:**\n\n- The disclosure AuditEvent exists at the CAS."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-64"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-265"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-377"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-661"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-959"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-378"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-382"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-381"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-991"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-962"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-960"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-958"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-components-client.html#requirement-512"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-497"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-499"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-500"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-566"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-513"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-506"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-529"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-532"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-533"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-536"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-564"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client-consent-server.html#requirement-537"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-538"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-540"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-503"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-517"
+    }],
+    "sequence" : 44,
+    "dependency" : [{
+      "description" : "**Create a subscription - rest-hook**\n\nThis is a wide-open test case that can be used as the base for many variations.\n\n**Actors:** Consent Client, CAS, Notification Endpoint\n\n**Pre-condition:** Consent Client has prepared its Notification Endpoint to receive notifications.\n\n**Narrative:**\n\n1. Client POSTs a conformant Subscription to the CAS. \\[note no requirement for it to be FASTSubscription\\]\n2. Verify the request is valid according to the linked requirements.\n3. CAS verifies the request is valid.\n4. CAS returns a conformant response indicating the new Subscription location and optionally the resource in the body.\n5. Verify the response is valid according to the linked requirements.\n6. Optional: CAS sends a handshake. Execute test case \"Notify for a Subscription - rest-hook\". The trigger in step 1 is the creation of the Subscription. Verify the notification as \"handshake\".\n7. Optional: Consent Client GETs the new Subscription to confirm it is active. Execute test case \"Read a Subscription\".\n8. Optional: Consent Client executes $status against the new Subscription to confirm it is active. Execute test case \"Operation: Get Subscription Status\".\n\n**Post-condition:**\n\n- The new Subscription exists at the CAS."
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-503"
+    }],
+    "sequence" : 45,
+    "dependency" : [{
+      "description" : "**Create a subscription - rest-hook PUT**\n\nThis test case extends test case \"Create a subscription - rest-hook\".\n\n- In step 1, Consent Client PUTs a conformant Subscription to the CAS.\n- In step 2, verify the resource id passed in was used."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-507"
+    }],
+    "sequence" : 46,
+    "dependency" : [{
+      "description" : "**Error: Create a Subscription - rest-hook - unsupported backport-channel-type**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Consent Client POSTs a Subscription to the CAS using the backport-channel-type extension with a nonsense value.\n2. CAS returns a conformant response indicating the Subscription request was rejected.\n3. Verify the response is valid according to the linked requirements.\n\n**Post-condition:** The Subscription has not been created at the CAS."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Error"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-531"
+    }],
+    "sequence" : 47,
+    "dependency" : [{
+      "description" : "**Error: Create a Subscription - rest-hook - unsupported filter**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Consent Client POSTs a Subscription to the CAS using a filter with a nonsense value.\n2. CAS returns a conformant response indicating the Subscription request was rejected.\n3. Verify the response is valid according to the linked requirements.\n\n**Post-condition:** The Subscription has not been created at the CAS."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Error"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-1123"
+    }],
+    "sequence" : 48,
+    "dependency" : [{
+      "description" : "**Error: Create a Subscription - rest-hook - unsupported content level**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Consent Client POSTs a Subscription to the CAS using a content level the server does not support.\n2. CAS returns a conformant response indicating the Subscription request was rejected.\n3. Verify the response is valid according to the linked requirements.\n\n**Post-condition:** The Subscription has not been created at the CAS."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Error"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-539"
+    }],
+    "sequence" : 49,
+    "dependency" : [{
+      "description" : "**Error: Create a Subscription - rest-hook - unsupported topic**\n\n**Actors:** Consent Client, CAS\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Consent Client POSTs a Subscription to the CAS using a nonsense topic.\n2. CAS returns a conformant response indicating the Subscription request was rejected.\n3. Verify the response is valid according to the linked requirements.\n\n**Post-condition:** The Subscription has not been created at the CAS."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Error"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-959"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-379"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-991"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-962"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-383"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-960"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-958"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-509"
+    }],
+    "sequence" : 50,
+    "dependency" : [{
+      "description" : "**Update a Subscription - rest-hook**\n\nThis is a wide-open test case that can be used as the base for many variations.\n\n**Actors:** Consent Client, CAS, Notification Endpoint\n\n**Pre-condition:** Consent Client has an existing Subscription at the CAS.\n\n**Narrative:**\n\n1. Client PUTs an updated, conformant Subscription to the CAS. \\[note no requirement for it to be FASTSubscription\\]\n2. Verify the request is valid according to the linked requirements.\n3. CAS verifies the request is valid.\n4. CAS returns a conformant response indicating the new Subscription location and optionally the resource in the body.\n5. Verify the response is valid according to the linked requirements.\n6. Optional: CAS sends a handshake. Execute test case \"Notify for a Subscription - rest-hook channel\". The trigger in step 1 is the creation of the Subscription. Verify the notification as \"handshake\".\n7. Optional: Consent Client GETs the new Subscription to confirm it is active. Execute test case \"Read a Subscription\".\n8. Optional: Consent Client executes $status against the new Subscription to confirm it is active. Execute test case \"Operation: Get Subscription Status\".\n\n**Post-condition:**\n\n- The updated Subscription exists at the CAS."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-509"
+    }],
+    "sequence" : 51,
+    "dependency" : [{
+      "description" : "**Update a Subscription - rest-hook PATCH**\n\nThis test case extends test case \"Update a Subscription - rest-hook\".\n\n- In step 1, Consent Client PATCHs an updated, conformant Subscription to the CAS.\n- At the end of the test case, verify the resource was updated appropriately."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-64"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-265"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-377"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-381"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-331"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-components-consent-server.html#requirement-565"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-500"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-567"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-506"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-529"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-530"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-534"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client-consent-server.html#requirement-562"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-563"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-client.html#requirement-564"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-892"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-893"
+    }],
+    "sequence" : 52,
+    "dependency" : [{
+      "description" : "**Notify for a Subscription** **- rest-hook**\n\nThis is a wide-open test case that can be used as the base for many variations. Each variation needs to specify what the trigger in step 1 is.\n\n**Actors:** Consent Client, CAS, Notification Endpoint\n\n**Pre-condition:** Consent Client has successfully made a Subscription at the CAS, with the rest-hook channel type.\n\n**Narrative:**\n\n1. An actor performs an action at the CAS that should trigger a notification for this Subscription.\n2. CAS POSTs a conformant R4 Topic-Based Subscription Notification Bundle to the Consent Client's Notification Endpoint.\n3. Verify the notification is valid according to the linked requirements.\n4. The Consent Client verifies the notification and returns a valid 200 response.\n5. Verify the response.\n\n**Post-condition:**\n\n- None"
+    }],
+    "testRun" : [{
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    },
+    {
+      "script" : {
+        "language" : {
+          "text" : "FHIR TestScript - Touchstone profile"
+        },
+        "sourceString" : "TestScript reference TBD"
+      }
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-64"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-265"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-202"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-377"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-380"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-381"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-384"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client.html#requirement-870"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-subscription-topics-consent-server.html#requirement-600"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-subscription-topics-consent-server.html#requirement-606"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-workflow-client-consent-server.html#requirement-541"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-500"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-513"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-534"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-510"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-517"
+    }],
+    "sequence" : 53,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification**\n\nThis is a wide-open workflow that can be used as the base for many variations.\n\n**Actors:** Consent Client, CAS, Notification Endpoint, Tester\n\n**Pre-condition:** CAS has advertised its support for subscriptions in its CapabilityStatement. Consent Client has prepared its Notification Endpoint to receive notifications. There are no current subscriptions between this CAS and this Endpoint.\n\n**Narrative:**\n\n1. Execute test case \"Create a Subscription - rest-hook\".\n2. Tester performs an action at the CAS that should trigger a notification for this Subscription. This may be a local action or an API action.\n3. Execute test case \"Notify for a Subscription - rest-hook\". The trigger is step 2 above. Additionally verify the notification as \"event-notification\".\n4. Optional: Client GETs the new or modified Consent. Execute test case \"Read a Consent\".\n5. Client DELETEs the FASTSubscription at the CAS.\n6. The CAS deletes the Subscription.\n7. Verify the response is valid according to the linked requirements.\n8. Tester performs an action at the CAS that should trigger a notification for the previous Subscription. This may be a local action or an API action.\n9. Verify the CAS does not POST an \"event-notification\" R4 Topic-Based Subscription Notification Bundle to the Endpoint.\n\n**Post-condition:**\n\n- Any Subscriptions created at the CAS have been deleted. Other changes at the CAS (new Consents, etc.) may or may not have been deleted."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "sequence" : 54,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - patient**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n**Test data:** Data for 2 conformant FASTConsents for an existing patient known at the CAS. No existing Consents for this patient at the CAS. Each Consent differs by where it identifies the patient: patient.identifier element or patient.extension additionalIdentifier.\n\n- In step 1, Consent Client creates a Subscription at the CAS filtering only on patient id, for the known patient in the test data.\n- Repeat steps 2-3 as follows:\n- In step 2, Tester creates each Consent at the CAS using this test data.\n- In step 3, verify notification for each per this subscription and trigger.\n- In step 2, Tester updates each Consent at the CAS.\n- In step 3, verify notification for each per this subscription and trigger.\n- Continue with steps 4-7.\n- Repeat steps 8-9 as follows:\n- In step 8, Tester creates each Consent at the CAS using this test data.\n- In step 8, Tester updates each Consent at the CAS.\n- Verify no notification received."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "sequence" : 55,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - organization**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n**Test data:** Data for 3 conformant FASTConsents for an existing organization known at the CAS. No existing Consents for this organization at the CAS. Each Consent differs by where it identifies the organization: the extensions manager, controller or the provision.actor.role.reference.\n\n- In step 1, Consent Client creates a Subscription at the CAS filtering only on (TBD - fix) FASTConsentOrganizationId, for the known organization in the test data.\n- Repeat steps 2-3 as follows:\n- In step 2, Tester creates each Consent at the CAS using this test data.\n- In step 3, verify notification for each per this subscription and trigger.\n- In step 2, Tester updates each Consent at the CAS.\n- In step 3, verify notification for each per this subscription and trigger.\n- Continue with steps 4-7.\n- Repeat steps 8-9 as follows:\n- In step 8, Tester creates each Consent at the CAS using this test data.\n- In step 8, Tester updates each Consent at the CAS.\n- Verify no notification received."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-subscription-topics-consent-server.html#requirement-629"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-subscription-topics-client.html#requirement-637"
+    }],
+    "sequence" : 56,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - actor**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n**Test data:** Data for a conformant FASTConsent for an existing Consent actor (Consent.provision.actor.reference - see the actor search parameter) known at the CAS. No existing Consents for this actor at the CAS.\n\n- In step 1, Consent Client creates a Subscription at the CAS filtering only on actor, for the known actor in the test data.\n- Repeat steps 2-3 as follows:\n- In step 2, Tester creates the Consent at the CAS using this test data.\n- In step 3, verify notification per this subscription and trigger.\n- In step 2, Tester updates the Consent at the CAS.\n- In step 3, verify notification per this subscription and trigger.\n- Continue with steps 4-7.\n- Repeat steps 8-9 as follows:\n- In step 8, Tester creates each Consent at the CAS using this test data.\n- In step 8, Tester updates each Consent at the CAS.\n- Verify no notification received."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-subscription-topics-consent-server.html#requirement-630"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-subscription-topics-client.html#requirement-638"
+    }],
+    "sequence" : 57,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - status**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n**Test data:** Data for a conformant FASTConsent for an existing patient known at the CAS. No existing Consents for this patient at the CAS. Note that it may not be possible for there to be no existing Consents having this status at the CAS, so there may be false positives the tester will need to examine.\n\n- In step 1, Consent Client creates a Subscription at the CAS filtering only on status, for the known status in the test data.\n- Repeat steps 2-3 as follows:\n- In step 2, Tester creates the Consent at the CAS using this test data.\n- In step 3, verify notification per this subscription and trigger.\n- In step 2, Tester updates the Consent at the CAS, changing a field other than status.\n- In step 3, verify notification per this subscription and trigger.\n- In step 2, Tester updates the Consent at the CAS, changing the status field.\n- In step 3, status should not match, so no notification should occur.\n- In step 2, Tester updates the Consent at the CAS, changing the status field back to the matching value.\n- In step 3, verify notification per this subscription and trigger.\n- Continue with steps 4-7.\n- Repeat steps 8-9 as follows:\n- In step 8, Tester creates each Consent at the CAS using this test data.\n- In step 8, Tester updates each Consent at the CAS.\n- Verify no notification received."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "sequence" : 58,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - category**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n**Test data:** Data for a conformant FASTConsent for an existing patient known at the CAS. No existing Consents for this patient at the CAS. Note that it may not be possible for there to be no existing Consents having this category at the CAS, so there may be false positives the tester will need to examine.\n\n- In step 1, Consent Client creates a Subscription at the CAS filtering only on category, for the known category in the test data.\n- Repeat steps 2-3 as follows:\n- In step 2, Tester creates the Consent at the CAS using this test data.\n- In step 3, verify notification per this subscription and trigger.\n- In step 2, Tester updates the Consent at the CAS, changing a field other than category.\n- In step 3, verify notification per this subscription and trigger.\n- In step 2, Tester updates the Consent at the CAS, changing the scope field.\n- In step 3, category should not match, so no notification should occur.\n- In step 2, Tester updates the Consent at the CAS, changing the category field back to the matching value.\n- In step 3, verify notification per this subscription and trigger.\n- Continue with steps 4-7.\n- Repeat steps 8-9 as follows:\n- In step 8, Tester creates each Consent at the CAS using this test data.\n- In step 8, Tester updates each Consent at the CAS.\n- Verify no notification received."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-consent-server.html#requirement-64"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-265"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-technical-specification-client.html#requirement-202"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-377"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-380"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-381"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-client.html#requirement-384"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-534"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-capstmt-consent-server.html#requirement-510"
+    }],
+    "sequence" : 59,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - no filters**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n**Test data:** Data for a conformant FASTConsent for an existing patient known at the CAS. No existing Consents for this patient at the CAS. Note that it may not be possible for there to be no existing Consents at the CAS, so there may be false positives the tester will need to examine.\n\n- In step 1, Consent Client creates a Subscription at the CAS with no filters.\n- Repeat steps 2-3 as follows:\n- In step 2, Tester creates the Consent at the CAS using this test data.\n- In step 3, verify notification per this subscription and trigger.\n- In step 2, Tester updates the Consent at the CAS.\n- In step 3, verify notification per this subscription and trigger.\n- Continue with steps 4-7.\n- Repeat steps 8-9 as follows:\n- In step 8, Tester creates each Consent at the CAS using this test data.\n- In step 8, Tester updates each Consent at the CAS.\n- Verify no notification received."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-501"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-535"
+    }],
+    "sequence" : 60,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - full-resource payload**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n- In step 1, Consent Client creates a Subscription at the CAS requesting full-resource payloads.\n- After step 3, additionally verify the notification contains the full Consent resource(s).\n- Continue through step 7.\n- The test case ends - no additional steps are needed."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-501"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-535"
+    }],
+    "sequence" : 61,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - id only payload**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n- In step 1, Consent Client creates a Subscription at the CAS requesting full-resource payloads.\n- After step 3, additionally verify the notification contains only the id of the Consent resource(s).\n- Continue through step 7.\n- The test case ends - no additional steps are needed."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-conformance-consent-server.html#requirement-501"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-535"
+    }],
+    "sequence" : 62,
+    "dependency" : [{
+      "description" : "**Workflow: Consent subscription and notification - empty payload**\n\nThis test case extends test case \"Workflow: Consent subscription and notification\".\n\n- In step 1, Consent Client creates a Subscription at the CAS requesting full-resource payloads.\n- After step 3, additionally verify the notification is empty.\n- Continue through step 7.\n- The test case ends - no additional steps are needed."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Conditional"
+      },
+      {
+        "text" : "Alternate success"
+      }]
+    }]
+  },
+  {
+    "sequence" : 63,
+    "dependency" : [{
+      "description" : "**Use Case: Sign and File Consent**\n\n**Actors:** Consenter, Consent Client, CAS\n\n**Pre-condition:** A consent form has been reviewed and completed (see use case [Review Consent](https://build.fhir.org/ig/HL7/fhir-consent-management/usecases.html#review-consent)).\n\n**Narrative:**\n\n1. The consenter expresses their wish to sign and enact the consent \\[VERIFY: inspection\\]. The user experience provides a mechanism \\[VERIFY: inspection\\] to ensure the patient is making this decision in an informed way (and not by accident).\n2. A proper user experience enables the consenter to sign the consent form \\[VERIFY: inspection\\].\n3. Execute test case \"Operation: File a Consent\".\n4. The consenter can see the change in the status of the consent to become active \\[VERIFY: inspection\\].\n5. The consenter can review the finalized consent \\[VERIFY: inspection\\] and download a human-readable or print-friendly copy \\[VERIFY: inspection\\].\n\n**Post-condition:**\n\n- A signed consent form is retained for future review. \\[Q: Is this optional based on whether QR or DR were passed in?\\]\n- A computable consent resource is extracted based on the finalized consent form and is stored in the consent store FHIR server."
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Provisional"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-597"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-598"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-599"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-477"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-601"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-464"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-469"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+      "valueUrl" : "https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements-structure-definitions-client-consent-server.html#requirement-595"
+    }],
+    "sequence" : 64,
+    "dependency" : [{
+      "description" : "**Validate FHIR resources**\n\nThis is a base test case that will be added to all others.\n\n**Actors:** Any\n\n**Pre-condition:** None\n\n**Narrative:**\n\n1. Test tool or manual evaluator captures any message under test.\n2. Call the FHIR Validator on the top level resources in the message.\n\n**Post-condition:**\n\n- None"
+    }],
+    "assertion" : [{
+      "type" : [{
+        "text" : "Required"
+      },
+      {
+        "text" : "Basic success"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,79 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "parameters-revokeconsent",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/consent-management/StructureDefinition/RevokeConsentParameters"]
+  },
+  "parameter" : [{
+    "name" : "consent",
+    "valueReference" : {
+      "reference" : "Consent/ConsentExample",
+      "identifier" : {
+        "system" : "http://example.org/identifiers",
+        "value" : "ec63290f-1f93-4ed3-b531-0d86e2791165"
+      }
+    }
+  },
+  {
+    "name" : "patient",
+    "valueReference" : {
+      "reference" : "Patient/patient-lara-miren",
+      "identifier" : {
+        "system" : "http://example.org/identifiers",
+        "value" : "patient-lara-miren"
+      }
+    }
+  },
+  {
+    "name" : "document",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "id" : "docref-revokeconsent",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/us/consent-management/StructureDefinition/FASTDocumentReference"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>DocumentReference docref-revokeconsent</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.org/identifiers",
+        "value" : "docref-revokeconsent"
+      }],
+      "status" : "current",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "64292-6"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "57016-8"
+        }]
+      }],
+      "subject" : {
+        "reference" : "Patient/patient-lara-miren",
+        "identifier" : {
+          "system" : "http://example.org/identifiers",
+          "value" : "patient-lara-miren"
+        }
+      },
+      "date" : "2025-08-13T15:30:58.502-04:00",
+      "author" : [{
+        "reference" : "Patient/patient-lara-miren",
+        "identifier" : {
+          "system" : "http://example.org/identifiers",
+          "value" : "patient-lara-miren"
+        }
+      }],
+      "content" : [{
+        "attachment" : {
+          "contentType" : "text/plain; charset=utf-8",
+          "data" : "SSwgTGFyYSBNaXJlbiwgcmV2b2tlIG15IGNvbnNlbnQgdG8gcGVybWl0IFJvYmVydCBNaXJlbiBhY2Nlc3MgdG8gbXkgbWVkaWNhbCByZWNvcmRzLg=="
+        }
+      }]
+    }
+  }]
+}

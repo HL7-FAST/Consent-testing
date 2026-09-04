@@ -1,0 +1,14 @@
+{
+  "resourceType": "Organization",
+  "id": "organization-fast-consent-ri",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "name": "FAST Consent RI"
+}
