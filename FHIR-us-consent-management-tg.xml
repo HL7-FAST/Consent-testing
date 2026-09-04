@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="" url="http://hl7.org/fhir/us/consent-management-tg">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="TestScript/00-01-Obtain-server-CapabilityStatement" key="TestScript-00-01-Obtain-server-CapabilityStatement" name="00 Capabilities | 01 Obtain server CapabilityStatement"/>
+<artifact id="TestScript/00-02-Obtain-server-CapabilityStatement-JSON" key="TestScript-00-02-Obtain-server-CapabilityStatement-JSON" name="00 Capabilities | 02 Obtain server CapabilityStatement - JSON"/>
+<artifact id="TestScript/00-03-Obtain-server-CapabilityStatement-XML" key="TestScript-00-03-Obtain-server-CapabilityStatement-XML" name="00 Capabilities | 03 Obtain server CapabilityStatement = XML"/>
+<artifact id="TestScript/01-01-Read-a-Consent" key="TestScript-01-01-Read-a-Consent" name="01 Read Simple Search - All SUT | 01 Read a Consent"/>
+<artifact id="TestScript/01-02-Search-for-a-Consent" key="TestScript-01-02-Search-for-a-Consent" name="01 Read Simple Search - All SUT | 02 Search for a Consent"/>
+<artifact id="Consent/ConsentExample" key="Consent-ConsentExample" name="Consent-ConsentExample"/>
+<artifact id="DocumentReference/docref-fileconsent" key="DocumentReference-docref-fileconsent" name="DocumentReference-docref-fileconsent"/>
+<artifact id="Organization/organization-fast-consent-ri" key="Organization-organization-fast-consent-ri" name="Organization-organization-fast-consent-ri"/>
+<artifact id="Patient/patient-lara-miren" key="Patient-patient-lara-miren" name="Patient-patient-lara-miren"/>
+<artifact id="RelatedPerson/relatedperson-robert-miren" key="RelatedPerson-relatedperson-robert-miren" name="RelatedPerson-relatedperson-robert-miren"/>
+<artifact id="TestPlan/fhir-consent-management-1.0.0-preview-test-plan" key="TestPlan-fhir-consent-management-1.0.0-preview-test-plan" name="Scalable Consent Management 1.0.0-preview Test Plan"/>
+<artifact id="Parameters/parameters-fileconsent" key="Parameters-parameters-fileconsent" name="parameters-fileconsent"/>
+<artifact id="Parameters/parameters-revokeconsent" key="Parameters-parameters-revokeconsent" name="parameters-revokeconsent"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="rtm_coverage_requirements" name="Coverage (Requirements)"/>
+<page key="downloads" name="Downloads"/>
+<page key="guidance" name="Guidance"/>
+<page key="index" name="Home"/>
+<page key="ig-history" name="IG History"/>
+<page key="rtm_requirements" name="Requirements"/>
+<page key="safety_security" name="Safety and Security"/>
+<page key="toc" name="Table of Contents"/>
+<page key="rtm_test_cases" name="Test Cases"/>
+</specification>

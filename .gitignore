@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+Requirements-fromNarrative.json
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
+_genonce.sh
+_genonce.bat
+_gencontinuous.sh
+_gencontinuous.bat
+

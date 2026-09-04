@@ -1,0 +1,36 @@
+== Suppressed Messages ==
+
+# 01 - The Scalable Consent Management TG is not currently published as an official HL7 IG
+ERROR: There is no jira specification file defined with the expected name of FHIR-us-consent-management-tg in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+# 02 - Touchstone Testing IG is not an HL7 published guide
+WARNING: ImplementationGuide/hl7.fhir.us.consent-management-tg: ImplementationGuide.dependsOn[3].uri: A definition could not be found for Canonical URL 'http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing'
+WARNING: ImplementationGuide/hl7.fhir.us.consent-management-tg: ImplementationGuide.dependsOn[3]: The canonical URL http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing doesn't point to an actual ImplementationGuide resource
+
+# 03 - Suppress information messages concerning OID auto assignment
+%could usefully have an OID assigned (OIDs are easy to assign%
+
+# 04 - Suppress information and warning messages for R5 TestPlan Requirements urls
+%Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+%No definition could be found for URL value 'https://build.fhir.org/ig/HL7/fhir-consent-management/en/Requirements%
+
+# 05 - Various issues with TestScript validation
+WARNING: TestScript/00-02-Obtain-server-CapabilityStatement-JSON: Unable to find artifact http://hl7.org/fhir/StructureDefinition/CapabilityStatement nominated as the artifact for test resource /TestScript/00-02-Obtain-server-CapabilityStatement-JSON
+WARNING: TestScript/00-01-Obtain-server-CapabilityStatement: Unable to find artifact http://hl7.org/fhir/StructureDefinition/CapabilityStatement nominated as the artifact for test resource /TestScript/00-01-Obtain-server-CapabilityStatement
+WARNING: TestScript/00-03-Obtain-server-CapabilityStatement-XML: Unable to find artifact http://hl7.org/fhir/StructureDefinition/CapabilityStatement nominated as the artifact for test resource /TestScript/00-03-Obtain-server-CapabilityStatement-XML
+WARNING: TestScript/01-01-Read-a-Consent: Unable to find artifact http://hl7.org/fhir/StructureDefinition/Consent nominated as the artifact for test resource /TestScript/01-01-Read-a-Consent
+WARNING: TestScript/01-02-Search-for-a-Consent: Unable to find artifact http://hl7.org/fhir/StructureDefinition/Bundle nominated as the artifact for test resource /TestScript/01-02-Search-for-a-Consent
+INFORMATION: en/TestScript-00-01-Obtain-server-CapabilityStatement.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'Confirm that the Consent Administration Service SHALL support JSON FHIR.'
+INFORMATION: en/TestScript-00-02-Obtain-server-CapabilityStatement-JSON.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'Confirm that the Consent Administration Service SHALL support JSON FHIR.'
+INFORMATION: en/TestScript-00-03-Obtain-server-CapabilityStatement-XML.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'Confirm that the Consent Administration Service SHALL support JSON FHIR.'
+INFORMATION: en/rtm_coverage_requirements.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: '<a title="1168: To search for consents by organization identifier, implementers SHOULD use the controller:identifier chained search parameter (e.g., GET [base]/Consent?controller:identifier='
+%This element does not match any known slice defined in the profile http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+%TestScript.text.div: The URL is not valid because '(URL contains 4 Invalid Characters: '\')': file://D:\GitHub\Touchstone\testing-ig\output/StructureDefinition-testscript.html
+%TestScript.text.div: Hyperlink scheme 'file' in 'file://D:\GitHub\Touchstone\testing-ig\output/StructureDefinition-testscript.html'%
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types|0.1.0
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types|0.1.0
+
