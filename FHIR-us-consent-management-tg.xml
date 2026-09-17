@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="" url="http://hl7.org/fhir/us/consent-management-tg">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/consent-management-tg" ciUrl="" defaultVersion="current" defaultWorkgroup="" url="http://hl7.org/fhir/us/consent-management-tg">
 <version code="current" url=""/>
+<version code="1.0.0-preview" url="http://hl7.org/fhir/us/consent-management-tg"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -9,6 +10,13 @@
 <artifact id="TestScript/00-03-Obtain-server-CapabilityStatement-XML" key="TestScript-00-03-Obtain-server-CapabilityStatement-XML" name="00 Capabilities | 03 Obtain server CapabilityStatement = XML"/>
 <artifact id="TestScript/01-01-Read-a-Consent" key="TestScript-01-01-Read-a-Consent" name="01 Read Simple Search - All SUT | 01 Read a Consent"/>
 <artifact id="TestScript/01-02-Search-for-a-Consent" key="TestScript-01-02-Search-for-a-Consent" name="01 Read Simple Search - All SUT | 02 Search for a Consent"/>
+<artifact id="TestScript/01-03-Read-an-AuditEvent" key="TestScript-01-03-Read-an-AuditEvent" name="01 Read Simple Search - All SUT | 03 Read an AuditEvent"/>
+<artifact id="TestScript/01-04-Search-for-an-AuditEvent" key="TestScript-01-04-Search-for-an-AuditEvent" name="01 Read Simple Search - All SUT | 04 Search for an AuditEvent"/>
+<artifact id="TestScript/01-05-Read-a-Subscription" key="TestScript-01-05-Read-a-Subscription" name="01 Read Simple Search - All SUT | 05 Read a Subscription"/>
+<artifact id="TestScript/03-01-Operation-File-a-Consent" key="TestScript-03-01-Operation-File-a-Consent" name="03 Operations - All SUT | 01 Operation: File a Consent"/>
+<artifact id="TestScript/03-02-Operation-Revoke-a-Consent-via-relative-reference" key="TestScript-03-02-Operation-Revoke-a-Consent-via-relative-reference" name="03 Operations - All SUT | 02 Operation: Revoke a Consent via relative reference"/>
+<artifact id="TestScript/03-03-Operation-Revoke-a-Consent-via-absolute-reference" key="TestScript-03-03-Operation-Revoke-a-Consent-via-absolute-reference" name="03 Operations - All SUT | 03 Operation: Revoke a Consent via absolute reference"/>
+<artifact id="TestScript/03-04-Operation-Revoke-a-Consent-via-logical-reference" key="TestScript-03-04-Operation-Revoke-a-Consent-via-logical-reference" name="03 Operations - All SUT | 04 Operation: Revoke a Consent via logical reference"/>
 <artifact id="Consent/ConsentExample" key="Consent-ConsentExample" name="Consent-ConsentExample"/>
 <artifact id="DocumentReference/docref-fileconsent" key="DocumentReference-docref-fileconsent" name="DocumentReference-docref-fileconsent"/>
 <artifact id="Organization/organization-fast-consent-ri" key="Organization-organization-fast-consent-ri" name="Organization-organization-fast-consent-ri"/>

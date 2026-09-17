@@ -1,0 +1,9 @@
+{
+  "package-id" : "hl7.fhir.us.consent-management-tg",
+  "version" : "1.0.0-preview",
+  "path" : "http://hl7.org/fhir/us/consent-management-tg",
+  "status" : "preview",
+  "sequence" : "STU 1",
+  "mode": "working",
+  "desc" : "The Scalable Consent Management Testing Guide defines the testing artifacts used to verify and validate implementations declaring conformance to and against the Scalable Consent Management Implementation Guide."
+}

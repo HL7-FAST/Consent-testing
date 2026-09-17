@@ -7,7 +7,7 @@ id: hl7.fhir.us.consent-management-tg
 canonical: http://hl7.org/fhir/us/consent-management-tg
 name: ScalableConsentManagementTG
 title: Scalable Consent Management Testing Guide
-description: The Scalable Consent Management Testing Guide defines the testing artifacts used the verify and validate implementation declaring conformance to and against the Scalable Consent Management Implementation Guide.
+description: The Scalable Consent Management Testing Guide defines the testing artifacts used to verify and validate implementations declaring conformance to and against the Scalable Consent Management Implementation Guide.
 status: active # draft | active | retired | unknown
 version: 1.0.0-preview
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
